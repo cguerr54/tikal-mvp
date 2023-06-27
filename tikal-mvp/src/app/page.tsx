@@ -1,22 +1,28 @@
-// make the below stacked 
+//@ts-nocheck
+import Image from 'next/image'
 
 export default function Login() {
   return (
     <main className="">
-      <section className="  border-2 border-pink-500">
+      <section className=" w-3/5 m-auto  border-2 border-pink-500">
         <div>
           <div className="border-2  border-green-400">
-            put tikal logo in this div
+            <Image
+              src="/assets/tikal-logo.png"
+              alt='skyblue logo for tikal industries'
+              width={400}
+              height={400}
+            />
           </div>
           <div className="  border-dotted border-2 border-blue-700">
             <form action="">
-              <label className="text" htmlFor="text">username:</label>
+              <label className="text" for="text">username:</label>
                 <input 
                   name="text" 
                   type="text"
                   title="username"
                 />
-              <label className="password" htmlFor="password">password:</label>
+              <label className="password" for="password">password:</label>
                 <input 
                   name="password" 
                   type="password"
@@ -33,13 +39,11 @@ export default function Login() {
                 <h1>Sign in</h1>  
                 {/* needs to be a link but just bolded */}
                 <p>Don&apos;t have an account?</p>
-                      
           </div>
             </form>
           </div>
         </div>
       </section>
-     
     </main>
   )
 }
