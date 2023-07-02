@@ -12,11 +12,11 @@ export default function Registration(){
   return(
     <main>
     <Navbar />
-      <form action="" className=" space-y-12">
-        <div className="border-b border-gray-900/10 pb-12">
+      <form action="" className=" space-y-8 max-w-xl  mx-auto my-8">
+        <div className=" pb-12">
           {/* add a navbar with -tikal */}
           {/* center the content */}
-          <h1 className="text-3xl mt-2">Register your account</h1>
+          <h1 className="text-3xl my-4 text-center    font-semibold">Register your account</h1>
           <div className="mt-2">
             <h2 className="text-base font-semibold leading-7 text-gray-900">Account information</h2>
           </div>
@@ -85,14 +85,14 @@ export default function Registration(){
             </div>
           </div>
 
-          <div className="col-span-full">
+          <div className="col-span-full max-w-sm">
             <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-gray-900">Street address:</label>
             <div className="mt-2">
               <input type="text" name="street-address" id="street-address" autoComplete="street-address" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
             </div>
 
             <div className="sm:col-span-2 sm:col-start-1">
-              <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">City</label>
+              <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">City:</label>
               <div className="mt-2">
                 <input type="text" name="city" id="city" autoComplete="address-level2" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
               </div>
@@ -105,23 +105,20 @@ export default function Registration(){
               </div>
             </div>
 
-            <div className="  sm:col-span-2">
+            <div className="sm:col-span-2">
               <label htmlFor="postal-code" className="block text-sm font-medium leading-6 text-gray-900">ZIP / Postal code </label>
               <div className="mt-2">
                 <input type="text" name="postal-code" id="postal-code" autoComplete="postal-code" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
               </div>
             </div>
           </div>
-
-
-
-
-
-
-
         </div>
-        
+        <div className="">
+          {/* this div isn't controlling the breakline */}
+          <button type="submit" className="flex justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600  w-60 mx-auto -mt-10 h-14 pt-4">Sign up</button>
+        </div>
       </form>
+      
     </main>
     
   )
