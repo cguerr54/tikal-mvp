@@ -1,14 +1,17 @@
 //@ts-nocheck
+import TikalLogo from '@/components/TikalLogo'
 import Image from 'next/image'
 
+
 export default function Login() {
+
   return (
     <main className="flex min-h-full flex-col justify-center px-6 py-28 lg:px-8">
       <section className="sm:mx-auto sm:w-full sm:max-w-sm ">
         <div>
           <div className="">
             <Image
-              src="/assets/tikal-logo.png"
+              src={TikalLogo}
               alt='skyblue logo for tikal industries'
               width={400}
               height={400}

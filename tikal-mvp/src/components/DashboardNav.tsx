@@ -5,7 +5,7 @@ import ProfilePic from './ProfilePic'
 import React, { useState } from 'react';
 
 
-export default function Navbar(){
+export default function DashboardNav(){
   // "use client"
   // there will be two versions of this dashboard
   // one will be for registration
@@ -32,7 +32,7 @@ export default function Navbar(){
               >
               <span className="sr-only">Open main menu</span>
               {/* 
-              icon wen menu is closed
+              icon when menu is closed
               menu open: "hidden", Menu closed: "block"
                */}
               <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -131,3 +131,5 @@ export default function Navbar(){
     </nav>
   )
 }
+
+// time to make dashboard page
