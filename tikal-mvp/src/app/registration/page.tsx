@@ -1,3 +1,8 @@
+'use client'
+// need 'use client' on a parent component of whatever
+// component that uses useState
+import Navbar from "@/components/Navbar";
+
 //@ts-nocheck
 export default function Registration(){
   // A registration page with code, full name, username, 
@@ -6,6 +11,7 @@ export default function Registration(){
 
   return(
     <main>
+    <Navbar />
       <form action="" className=" space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           {/* add a navbar with -tikal */}
