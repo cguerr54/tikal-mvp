@@ -15,6 +15,12 @@ export default function Dashboard(){
     
       <section>
       {/*put DataViz component here  */}
+
+
+    {/*  */}
+
+
+
       </section>
     </main>
   )
