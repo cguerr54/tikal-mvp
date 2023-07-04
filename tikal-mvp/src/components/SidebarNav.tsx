@@ -44,8 +44,3 @@ export default function SidebarNav() {
   )
 }
 
-
-// ok technically you need to add the 
-// dark mode stuff to the navbar and 
-// the side bar using the class system
-// so just do that 
