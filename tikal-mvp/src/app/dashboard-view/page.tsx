@@ -3,6 +3,7 @@
 import DashboardNav from "@/components/DashboardNav"
 import SidebarNav from "@/components/SidebarNav"
 import BarChart from "@/graphs/BarChart"
+import GradientGauge from "@/graphs/GradientGauge"
 
 export default function Dashboard(){
 
@@ -30,10 +31,14 @@ export default function Dashboard(){
         </div>
         <div className="ml-16 w-4/12 h-80 border-2 border-red-500">
           {/* Collected air quality data from weather.com or some other public resource */}
+          {/* for this one we'll put an ul of contaminants  */}
           <h1>card 2</h1>
         </div>
         <div className="ml-16 w-4/12 h-80 border-2 border-red-500">
           {/* Data display for collected soil moisture */}
+          {/* put a spectra graph here so that would look 
+          like a curved lined graph
+          with a gradient horizontal bar under it */}
           <h1>graph 2</h1>
         </div>
       </section>
@@ -43,10 +48,11 @@ export default function Dashboard(){
       <section className="w-11/12 m-auto flex mt-2">
       <div className="ml-16 w-5/12 h-80 border-2 border-green-500">
         {/* Data display for collected temperature at multiple locations */}
-          <h1>graph 3</h1>
+        <GradientGauge />
       </div>
       <div className="ml-16 w-5/12 h-80 border-2 border-green-500">
         {/* Collected data CO2 respiration measurement for soil */}
+        {/* i would consider just putting text in this one */}
           <h1>graph 4</h1>
       </div>
       </section>

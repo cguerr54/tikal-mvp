@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 
 export default function Login() {
+  // you need an input called "code" and it's a code that the user needs to input
 
   return (
     <main className="flex min-h-full flex-col justify-center px-6 py-28 lg:px-8">

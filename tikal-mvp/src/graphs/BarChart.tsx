@@ -20,10 +20,6 @@ ChartJS.register(
 )
 
 
-
-
-
-
 const BarChart = () => {
 
   // get the day values
