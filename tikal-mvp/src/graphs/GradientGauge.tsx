@@ -1,72 +1,59 @@
 //@ts-nocheck
-//@ts-nocheck
 import { 
   Chart as ChartJS, 
   CategoryScale,
   LinearScale,
-  BarElement,
   ArcElement,
   Title,
-  // Tooltip,  
-  // Legend,
-} from "chart.js";
-import data from '/src/data/data.json'
-import { Bar , Doughnut} from "react-chartjs-2"
+  RadialLinearScale,
+  // radialLinear,
 
+} from "chart.js";
+import { Doughnut} from "react-chartjs-2"
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  // BarElement,
   Title,
-  // Tooltip,
   ArcElement,
-  // Legend,
+  RadialLinearScale,
+  // radialLinear,
+
 )
 
 const GradientGauge = () => {
 
-  // get the day values
-  const getDay = (weekday) => {
-    return [weekday.day]
+
+// chartText plugin block
+  const gaugeChartText = {
+    id: 'gaugeChartText',
+    afterDatasetsDraw(chart, args, pluginOptions) {
+      const {ctx, data, chartArea: {top, bottom, left, right, width, height}, scales: {r} } = chart
+      ctx.save()
+      console.log(r)
+      ctx.restore();
+      // const xCoordinate = chart.getDatasetMeta(0).data[0].x
+      // const yCoordinate = chart.getDatasetMeta(0).data[0].y
+
+      // ctx.fillRect(xCoordinate, yCoordinate, 400, 5)
+    }
+
   }
 
-  // hold the values that will be labels 
-  const labels = data.map(getDay)
 
-  // get the amount values
-  const getAmount = (cost) => {
-    return [cost.amount]
-  }
-
-  // what we want to show in the data field (the bars)
-  const amountSpent = data.map(getAmount)
-
-
-  // console.log(labels)
 
   const chartData = {
-    labels,
+    labels: ['Score', 'Gray Area'],
     datasets: [
       {
         label: "",
-        data: [43.28, 55.81],
+        data: [650, 200],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)', //red
-          // 'rgba(255, 159, 64, 0.2)', // orange
-          // 'rgba(255, 205, 86, 0.2)', //yellow?
-          // 'rgba(75, 192, 192, 0.2)', //green
-          // 'rgba(54, 162, 235, 0.2)', // blue
-          // 'rgba(153, 102, 255, 0.2)', //purple
           'rgba(201, 203, 207, 0.2)' //gray
         ],
         borderColor: [
           'rgb(255, 99, 132, 0.2)', //red
-          // 'rgb(255, 159, 64)',
-          // 'rgb(255, 205, 86)',
-          // 'rgb(75, 192, 192)',
-          // 'rgb(54, 162, 235)',
-          // 'rgb(153, 102, 255)',
           'rgb(201, 203, 207, 0.2)' //gray
         ],
         borderWidth: 1, 
@@ -80,7 +67,18 @@ const GradientGauge = () => {
     ],
     options: {
       aspectRatio: 1.5,
-      // scales: {
+      scales: {
+        // r:{
+        //   display: true,
+        //   beginAtZero: true,
+        //   grid: {
+        //     display: false,
+        //   },
+        //   ticks: {
+        //     display: false, 
+        //   }
+        // }
+      },
       //   x: {
       //     grid: {
       //       display: false, 
@@ -106,21 +104,32 @@ const GradientGauge = () => {
           enabled: false
         }
       }
-    }
+    },
+    plugins: [gaugeChartText]
   }
 
   return (
     <section className="">
       <div>
-        <h1 className="text-xl font-bold py-8  text-amber-950"> Spending - Last 7 days</h1>
+        <h1 className="text-xl font-bold py-8  text-amber-950"> Lead water level</h1>
       </div>
       <div>
-        <Doughnut data={chartData} options={chartData.options} />
+        <Doughnut 
+          data={chartData}
+          options={chartData.options}
+        />
+        {/* you need to fix the pointLabel  */}
+        <div className="flex justify-between ">
+          <div className="border-2 border-red-500 ">
+          <p>label 1</p>
+          </div>
+          <div className=" border-2 border-red-500">
+          <p>label 2</p>
+          </div>
+
+        </div>
 
       </div>
-      {/* <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr> */}
-    
-
     </section>
   
   );

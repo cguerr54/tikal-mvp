@@ -47,9 +47,27 @@ const BarChart = () => {
       {
         label: "",
         data: amountSpent,
-        backgroundColor: 'hsl(10, 79%, 65%)',
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)', //red
+            'rgba(255, 159, 64, 0.2)', // orange
+            'rgba(255, 205, 86, 0.2)', //yellow?
+            'rgba(75, 192, 192, 0.2)', //green
+            'rgba(54, 162, 235, 0.2)', // blue
+            'rgba(153, 102, 255, 0.2)', //purple
+            'rgba(201, 203, 207, 0.2)' //gray
+          ],
+          borderColor: [
+            'rgb(255, 99, 132)', //red
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)' //gray
+          ],
+          borderWidth: 1,
         borderRadius: 4,
-        hoverBackgroundColor: 'hsl(186, 34%, 60%)'
+        // hoverBackgroundColor: 'hsl(186, 34%, 60%)'
       }
     ],
     options: {
@@ -89,7 +107,6 @@ const BarChart = () => {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
     
       <br />
-      {/* <ChartSummary /> */}
     </section>
   
   );

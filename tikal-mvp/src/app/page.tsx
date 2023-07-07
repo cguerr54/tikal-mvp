@@ -1,4 +1,5 @@
 //@ts-nocheck
+'use client'
 import TikalLogo from '@/components/TikalLogo'
 import Image from 'next/image'
 
@@ -36,7 +37,7 @@ export default function Login() {
                     <a href="#" className='font-semibold text-tikal-cyan hover:text-indigo-500 float-right -mt-6 '>Forgot your password?</a>
 
                     <div className=''>
-                      <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                      <input id="password" name="password" type="password" autoComplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
 
                     </div>
                   </div>
@@ -48,9 +49,9 @@ export default function Login() {
               </div>
 
             </form>
-            <p class="mt-10 text-center text-sm text-gray-500">
+            <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?
-              <a href="#" class="font-semibold leading-6 text-black hover:text-indigo-500"> Sign up for an account</a>
+              <a href="#" className="font-semibold leading-6 text-black hover:text-indigo-500"> Sign up for an account</a>
     </p>
           </div>
         </div>

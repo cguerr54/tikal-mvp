@@ -46,7 +46,7 @@ export default function Dashboard(){
       {/* two wide graphs */}
 
       <section className="w-11/12 m-auto flex mt-2">
-      <div className="ml-16 w-5/12 h-80 border-2 border-green-500">
+      <div className="ml-16 w-5/12 h-80 border-2 border-green-700">
         {/* Data display for collected temperature at multiple locations */}
         <GradientGauge />
       </div>
