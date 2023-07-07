@@ -6,7 +6,6 @@ import {
   ArcElement,
   Title,
   RadialLinearScale,
-  // radialLinear,
 
 } from "chart.js";
 import { Doughnut} from "react-chartjs-2"
@@ -17,97 +16,59 @@ ChartJS.register(
   Title,
   ArcElement,
   RadialLinearScale,
-  // radialLinear,
 
 )
 
 const GradientGauge = () => {
 
-
-// chartText plugin block
-  const gaugeChartText = {
-    id: 'gaugeChartText',
-    afterDatasetsDraw(chart, args, pluginOptions) {
-      const {ctx, data, chartArea: {top, bottom, left, right, width, height}, scales: {r} } = chart
-      ctx.save()
-      console.log(r)
-      ctx.restore();
-      // const xCoordinate = chart.getDatasetMeta(0).data[0].x
-      // const yCoordinate = chart.getDatasetMeta(0).data[0].y
-
-      // ctx.fillRect(xCoordinate, yCoordinate, 400, 5)
-    }
-
-  }
-
-
-
   const chartData = {
     labels: ['Score', 'Gray Area'],
     datasets: [
       {
-        label: "",
+        label: "level of cont",
         data: [650, 200],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)', //red
-          'rgba(201, 203, 207, 0.2)' //gray
-        ],
-        borderColor: [
-          'rgb(255, 99, 132, 0.2)', //red
-          'rgb(201, 203, 207, 0.2)' //gray
-        ],
+        backgroundColor: (context) => {
+          console.log(context)
+          const chart = context.chart
+          const {ctx, chartArea} = chart
+          if(!chartArea) {
+            return null
+          }
+          if(context.dataIndex === 0) {
+            return getGradient(chart)
+          }else {
+            return 'black'
+          }
+        },
         borderWidth: 1, 
         cutout: '90%',
         circumference: 180,
         rotation: 270,   
-        // backgroundColor: 'hsl(10, 79%, 65%)',
-        // borderRadius: 4,
-        // hoverBackgroundColor: 'hsl(186, 34%, 60%)'
       }
     ],
     options: {
       aspectRatio: 1.5,
       scales: {
-        // r:{
-        //   display: true,
-        //   beginAtZero: true,
-        //   grid: {
-        //     display: false,
-        //   },
-        //   ticks: {
-        //     display: false, 
-        //   }
-        // }
       },
-      //   x: {
-      //     grid: {
-      //       display: false, 
-      //     },
-      //     border: {
-      //       color: 'white'
-      //     },
-      //   },
-      //   y: {
-      //     grid: {
-      //       display: false,
-      //     },
-      //     ticks: {
-      //       display: false,
-      //     },
-      //     border: {
-      //       color: 'white'
-      //     }
-      //   }
-      // },
       plugins: {
         tooltip: {
           enabled: false
         }
       }
     },
-    plugins: [gaugeChartText]
   }
 
+  const options = {
+
+  }
+  function getGradient(chart) {
+    const {ctx, chartArea: {top, bottom, left, right}} = chart
+    const gradientSegment = ctx.createLinearGradient(left, 0, right, 0)
+    gradientSegment.addColorStop(0, 'red')
+    gradientSegment.addColorStop(0.5, 'orange')
+    gradientSegment.addColorStop(1, 'green')
+    return gradientSegment
+  }
   return (
     <section className="">
       <div>
@@ -120,10 +81,10 @@ const GradientGauge = () => {
         />
         {/* you need to fix the pointLabel  */}
         <div className="flex justify-between ">
-          <div className="border-2 border-red-500 ">
+          <div className=" ">
           <p>label 1</p>
           </div>
-          <div className=" border-2 border-red-500">
+          <div className=" ">
           <p>label 2</p>
           </div>
 
