@@ -1,14 +1,17 @@
 //@ts-nocheck
+import TikalLogo from '@/components/TikalLogo'
 import Image from 'next/image'
 
+
 export default function Login() {
+
   return (
     <main className="flex min-h-full flex-col justify-center px-6 py-28 lg:px-8">
-      <section className="sm:mx-auto sm:w-full sm:max-w-sm border-pink-500">
+      <section className="sm:mx-auto sm:w-full sm:max-w-sm ">
         <div>
-          <div className="border border-green-400">
+          <div className="">
             <Image
-              src="/assets/tikal-logo.png"
+              src={TikalLogo}
               alt='skyblue logo for tikal industries'
               width={400}
               height={400}
@@ -16,7 +19,7 @@ export default function Login() {
             />
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
           </div>
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm  border-dotted border-2 border-blue-700">
+          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm ">
             <form className='space-y-6' action="#" method='POST' >
               <div>
                 <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor="email">Email Address:</label>
