@@ -1,9 +1,9 @@
 'use client'
+//@ts-nocheck
 // need 'use client' on a parent component of whatever
 // component that uses useState
 import Navbar from "@/components/Navbar";
 
-//@ts-nocheck
 export default function Registration(){
   // A registration page with code, full name, username, 
   // location, email, phone number, org name, org type- select multiple 
