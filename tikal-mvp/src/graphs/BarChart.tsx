@@ -96,16 +96,13 @@ const BarChart = () => {
   }
 
   return (
-    <section className="bg-stone-100 border-2 rounded-xl px-8">
+    <section className="">
       <div>
-        <h1 className="text-xl font-bold py-8  text-amber-950"> Spending - Last 7 days</h1>
+        <h1 className="text-xl font-bold py-8  text-amber-950">Collected Soil Moisture</h1>
       </div>
       <div>
         <Bar data={chartData} options={chartData.options} />
-
       </div>
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-    
       <br />
     </section>
   

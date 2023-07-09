@@ -7,6 +7,7 @@ import {
   Title,
   RadialLinearScale,
 
+
 } from "chart.js";
 import { Doughnut} from "react-chartjs-2"
 
@@ -47,7 +48,8 @@ const GradientGauge = () => {
       }
     ],
     options: {
-      aspectRatio: 1.5,
+      responsive: true,
+      aspectRatio: 2,
       scales: {
       },
       plugins: {
@@ -72,7 +74,7 @@ const GradientGauge = () => {
   return (
     <section className="">
       <div>
-        <h1 className="text-xl font-bold py-8  text-amber-950"> Lead water level</h1>
+        <h1 className="text-xl font-bold py-8  text-amber-950">Nutrient density</h1>
       </div>
       <div>
         <Doughnut 

@@ -32,14 +32,14 @@ export default function SidebarNav() {
 }
   
   return(
-    <div className="fixed h-screen w-16 flex flex-col bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white shadow-lg">
 
-<SideBarIcon icon={<CiCoffeeCup size="28" />} />
+    <div className=" h-screen w-16 flex flex-col bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white shadow-lg">
+      <div className=' space-y-6'>
+        <SideBarIcon icon={<CiCoffeeCup size="28" />} />
         <SideBarIcon icon={<CiBatteryFull size="28" />} />
         <SideBarIcon icon={<CiWheat size="28" />} />
-        {/* <SideBarIcon icon={<GoMarkGithub size="28" />} /> */}
         <SideBarIcon icon={<SwitchTheme />} />
-
+      </div>
     </div>
   )
 }
