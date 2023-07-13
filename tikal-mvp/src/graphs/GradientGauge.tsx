@@ -89,9 +89,7 @@ const GradientGauge = () => {
           <div className=" ">
           <p>label 2</p>
           </div>
-
         </div>
-
       </div>
     </section>
   
