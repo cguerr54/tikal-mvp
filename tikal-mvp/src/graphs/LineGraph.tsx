@@ -31,7 +31,7 @@ const LineGraph = () => {
     labels,
     datasets: [
       {
-        label: "dataset 1",
+        label: "parts per million",
         data: [134, 212, 555, 953, 764, 111, 432 ],
         backgroundColor: 'rgb(255, 99, 132)',
           borderColor: 'rgba(255, 99, 132, 0.5)',
@@ -70,7 +70,7 @@ const LineGraph = () => {
   return (
     <section className="">
       <div>
-        <h1 className="text-xl font-bold py-8  text-amber-950">Spectra Emissions</h1>
+        <h1 className="text-xl font-bold py-8  text-amber-950">Input Water Quality </h1>
       </div>
       <div>
         <Line data={chartData} options={chartData.options} />
