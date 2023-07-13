@@ -1,8 +1,10 @@
 //@ts-nocheck
 'use client'
 import ActionBanner from "@/components/ActionBanner"
-import InfoBanner from "@/components/Banner"
+import InfoBanner from "@/components/InfoBanner"
 import DashboardNav from "@/components/DashboardNav"
+import DeployedDevices from "@/components/DeployedDevices"
+import FacilityImage from "@/components/FacilityImage"
 import SidebarNav from "@/components/SidebarNav"
 import BarChart from "@/graphs/BarChart"
 import GradientGauge from "@/graphs/GradientGauge"
@@ -23,37 +25,54 @@ export default function Dashboard(){
         <SidebarNav />
         </div>
       </section>
+      <section className="">
+        <div className="">
+          <div className="flex">
+            <div className="w-2/3">
+            <div className="space-y-4">
+              <div className="ml-24 mt-40">
+                <h1 className="  text-2xl font-semibold">inti results</h1>
+              </div>
+            <InfoBanner/>
+            <ActionBanner />
+            </div>
+          </div>
+          <div className="w1/3">
+        <FacilityImage />
+        </div>
+            </div>
+        
+        </div>
+      {/* <DeployedDevices /> */}
+      </section>
       {/* 4 small graphs or cards */}
       {/* each graph or card will be its own component */}
-      <InfoBanner/>
+      {/* <InfoBanner/>
       <ActionBanner />
+      <FacilityImage />
+      <DeployedDevices /> */}
       <section className="flex w-11/12 m-auto  mt-6">
-        <div className="ml-16 w-4/12 h-80 border-2 border-red-500">
-          {/* Nutrient testing results displayed from Inti */}
+        {/* <div className="ml-16 w-4/12 h-80 border-2 border-red-500">
           <BarChart />
-        </div>
-        <div className="ml-16 w-4/12 h-80 border-2 border-red-500">
-          {/* Collected air quality data from weather.com or some other public resource */}
-          {/* for this one we'll put an ul of contaminants  */}
+        </div> */}
+        {/* <div className="ml-16 w-4/12 h-80 border-2 border-red-500">
           <h1>card 2</h1>
-        </div>
-        <div className="ml-16 w-4/12 h-80 border-2 border-red-500">
-          {/* Data display for collected soil moisture */}
-          {/* put a spectra graph here so that would look 
-          like a curved lined graph
-          with a gradient horizontal bar under it */}
+        </div> */}
+        {/* <div className="ml-16 w-4/12 h-80 border-2 border-red-500">
           <h1>graph 2</h1>
-        </div>
+        </div> */}
       </section>
 
       {/* two wide graphs */}
 
-      <section className="w-11/12 m-auto flex mt-2">
-      <div className="ml-16 w-5/12 h-80 border-2 border-green-700">
+      <section className="w-11/12 m-auto flex">
+      <div className="ml-16 w-5/12 h-80">
         {/* Data display for collected temperature at multiple locations */}
-        <GradientGauge />
+        {/* <GradientGauge /> */}
+        {/* lets put Deployed Devices component here */}
+        <DeployedDevices />
       </div>
-      <div className="ml-16 w-5/12 h-80 border-2 border-green-500">
+      <div className="ml-16 w-5/12 h-80">
         {/* Collected data CO2 respiration measurement for soil */}
         {/* i would consider just putting text in this one */}
         <LineGraph />
@@ -68,7 +87,6 @@ export default function Dashboard(){
       {/* Irrigation automation notifications (aka text notifications to tell them to water the crops) */}
       {/* Nutrient dispersion update/notification */}
     
-     
     </main>
   )
 }
