@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 export default function Login() {
   // you need an input called "code" and it's a code that the user needs to input
+  // you still need a confidence interval box on the dashboard page
 
   return (
     <main className="flex min-h-full flex-col justify-center px-6 py-28 lg:px-8">
@@ -35,10 +36,8 @@ export default function Login() {
                   <div className='text-sm'>
                     {/* change the text color to match the logo */}
                     <a href="#" className='font-semibold text-tikal-cyan hover:text-indigo-500 float-right -mt-6 '>Forgot your password?</a>
-
                     <div className=''>
                       <input id="password" name="password" type="password" autoComplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-
                     </div>
                   </div>
                   
@@ -51,7 +50,7 @@ export default function Login() {
             </form>
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?
-              <a href="#" className="font-semibold leading-6 text-black hover:text-indigo-500"> Sign up for an account</a>
+              <a href="/registration" className="font-semibold leading-6 text-black hover:text-indigo-500"> Sign up for an account</a>
     </p>
           </div>
         </div>

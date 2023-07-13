@@ -1,9 +1,9 @@
 //@ts-nocheck
 
-export default function Banner() {
+export default function InfoBanner() {
 
   return(
-    <section className="m-auto mt-20 max-w-2xl w-full sm:w-8/12 h-28 rounded-xl bg-rose-600 opacity-90 text-white">
+    <section className="ml-24 mt-20 max-w-2xl w-full sm:w-8/12 h-28 rounded-xl bg-rose-600 opacity-90 text-white">
       <div className="flex justify-between ml-8">
         <div className=" font-medium text-3xl ml-14 mt-6">
           <h1 className="">Total Alerts Since <br /> Last Login</h1>

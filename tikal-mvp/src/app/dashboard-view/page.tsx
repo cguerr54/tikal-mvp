@@ -1,6 +1,7 @@
 //@ts-nocheck
 'use client'
-import Banner from "@/components/Banner"
+import ActionBanner from "@/components/ActionBanner"
+import InfoBanner from "@/components/Banner"
 import DashboardNav from "@/components/DashboardNav"
 import SidebarNav from "@/components/SidebarNav"
 import BarChart from "@/graphs/BarChart"
@@ -10,6 +11,7 @@ import LineGraph from "@/graphs/LineGraph"
 export default function Dashboard(){
 
   // the cards below need to stack in mobile and they currently don't
+  //consider making the background data
   
   return (
     <main className="">
@@ -23,7 +25,8 @@ export default function Dashboard(){
       </section>
       {/* 4 small graphs or cards */}
       {/* each graph or card will be its own component */}
-      <Banner />
+      <InfoBanner/>
+      <ActionBanner />
       <section className="flex w-11/12 m-auto  mt-6">
         <div className="ml-16 w-4/12 h-80 border-2 border-red-500">
           {/* Nutrient testing results displayed from Inti */}
