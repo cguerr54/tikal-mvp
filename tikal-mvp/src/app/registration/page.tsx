@@ -3,6 +3,7 @@
 // need 'use client' on a parent component of whatever
 // component that uses useState
 import Navbar from "@/components/Navbar";
+import Link from 'next/link'
 
 export default function Registration(){
   // A registration page with code, full name, username, 
@@ -115,7 +116,10 @@ export default function Registration(){
         </div>
         <div className="">
           {/* this div isn't controlling the breakline */}
-          <button type="submit" className="flex justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600  w-60 mx-auto -mt-10 h-14 pt-4">Sign up</button>
+          <Link 
+            type="submit" 
+            href='/dashboard-view'
+            className="flex justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600  w-60 mx-auto -mt-10 h-14 pt-4">Sign up</Link>
         </div>
       </form>
       

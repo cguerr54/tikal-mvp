@@ -2,12 +2,18 @@
 'use client'
 import TikalLogo from '@/components/TikalLogo'
 import Image from 'next/image'
-
+// import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export default function Login() {
   // you need an input called "code" and it's a code that the user needs to input
   // you still need a confidence interval box on the dashboard page
+  // THIS APP NEEDS TO STACK IN MOBILE VIEW
+// const router = useRouter()
 
+// const handleClick = () => {
+//   router.push('/registration')
+// }
   return (
     <main className="flex min-h-full flex-col justify-center px-6 py-28 lg:px-8">
       <section className="sm:mx-auto sm:w-full sm:max-w-sm ">
@@ -44,7 +50,12 @@ export default function Login() {
                 </div>
               </div>
               <div>
-                <button type="submit" className="flex w-full justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+                <Link 
+                  type="submit" 
+                  // onClick={handleClick}
+                  href='/registration'
+                  
+                  className="flex w-full justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</Link>
               </div>
 
             </form>
