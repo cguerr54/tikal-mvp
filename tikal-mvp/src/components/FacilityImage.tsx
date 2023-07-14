@@ -10,7 +10,7 @@ export default function FacilityImage() {
     <section className=' border-tikal-cyan mt-32' >
       <div>
         <div className='float-right mr-32'>
-          <h1 className='  text-lg font-semibold'>Plant Name</h1>
+          <h1 className='  text-lg font-semibold'>Springfield Plant </h1>
         </div>
         <Image
         alt='facility map'
