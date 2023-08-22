@@ -6,18 +6,21 @@ import Navbar from "@/components/Navbar";
 import Link from 'next/link'
 
 export default function Registration(){
-  // A registration page with code, full name, username, 
-  // location, email, phone number, org name, org type- select multiple 
-  //(agriculture, city, manufacturing), and password (twice to check)
+
+
+    {/* format the registration page to one similar to 
+            this one https://tikalfilters.slack.com/files/U030RSXFUSE/F05P70L6PMX/image.png
+            so you should have 3 cards that hold like 3 questions
+            */}
 
   return(
     <main>
     <Navbar />
-      <form action="" className=" space-y-8 max-w-xl  mx-auto my-8">
+      <form action="" className=" space-y-8 max-w-xl mx-auto my-8">
         <div className=" pb-12">
           {/* add a navbar with -tikal */}
           {/* center the content */}
-          <h1 className="text-3xl my-4 text-center    font-semibold">Register your account</h1>
+          <h1 className="text-3xl my-4 text-center font-semibold">Register your account</h1>
           <div className="mt-2">
             <h2 className="text-base font-semibold leading-7 text-gray-900">Account information</h2>
           </div>
@@ -56,9 +59,6 @@ export default function Registration(){
                 </select>
               </div>
             </div>
-
-
-            
 
             <div className="sm:col-span-4">
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">Email:</label>

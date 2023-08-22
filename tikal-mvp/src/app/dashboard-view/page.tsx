@@ -15,6 +15,9 @@ export default function Dashboard(){
   // the cards below need to stack in mobile and they currently don't
   //consider making the background data
   
+
+  // UPDATE, MAKE THE DASHBOARD MORE LIKE THIS: 
+  // https://tikalfilters.slack.com/files/U030RSXFUSE/F05NDR9R4KZ/image.png
   return (
     <main className="">
       <section>

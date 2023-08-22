@@ -9,24 +9,44 @@ export default function Login() {
   // you need an input called "code" and it's a code that the user needs to input
   // you still need a confidence interval box on the dashboard page
   // THIS APP NEEDS TO STACK IN MOBILE VIEW
-// const router = useRouter()
 
-// const handleClick = () => {
-//   router.push('/registration')
-// }
+// MAKE IT MORE LIKE THIS: 
+// https://tikalfilters.slack.com/files/U030RSXFUSE/F05NDQTRPFH/image.png
+
   return (
-    <main className="flex min-h-full flex-col justify-center px-6 py-28 lg:px-8">
-      <section className="sm:mx-auto sm:w-full sm:max-w-sm ">
-        <div>
-          <div className="">
+    <main className="flex min-h-full flex-col justify-center px-6 py-64 lg:px-8 border-2 border-red-500">
+      <section className="sm:mx-auto sm:w-full sm:max-w-6xl border-dotted border-gray-400 border-2 flex" >
+        {/* need to increase box height here but it's not working */}
+        <div className='border-dashed border-2 border-pink-500 w-2/6'>
+          {/* this div on the left */}
+          <div className="pt-4 ml-4">
             <Image
               src={TikalLogo}
               alt='skyblue logo for tikal industries'
-              width={400}
-              height={400}
-              // className='mx-auto h-10 w-auto' not sure if this looks better or the set height width
+              width={100}
+              height={100}
             />
-            <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
+          </div>
+
+          <div className='text-center '>
+          <h1 className='font-bold pt-10 text-3xl'>New Here??</h1>
+          <br />
+          <p>Create a new account</p>
+          <br />
+          <div className='border-2 border-yellow-600 flex justify-center items-center '>
+                <Link 
+                  type="submit" 
+                  href='/registration'
+                  className="flex w-9/12 justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase ">Sign up</Link>
+              </div>
+          </div>
+
+        </div>
+        <div className='border-2 border-tikal-cyan w-4/6'>
+          {/* this div on right */}
+          <div className="">
+            <h2 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
+            <p>add social media icons here chile</p>
           </div>
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm ">
             <form className='space-y-6' action="#" method='POST' >
@@ -53,16 +73,15 @@ export default function Login() {
                 <Link 
                   type="submit" 
                   // onClick={handleClick}
-                  href='/registration'
+                  href='/dashboard-view'
                   
-                  className="flex w-full justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</Link>
+                  className="flex w-full justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase">Sign in</Link>
               </div>
 
             </form>
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?
-              <a href="/registration" className="font-semibold leading-6 text-black hover:text-indigo-500"> Sign up for an account</a>
-    </p>
+              <a href="/registration" className="font-semibold leading-6 text-black hover:text-indigo-500"> Sign up for an account</a></p>
           </div>
         </div>
       </section>

@@ -7,7 +7,12 @@ import React, { useState } from 'react';
 
 export default function DashboardNav(){
 
+  {/* make it like this https://tikalfilters.slack.com/files/U030RSXFUSE/F05NDQTRPFH/image.png
+          
+          */}
+  // state for account settings menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // state for mobile menu
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 
