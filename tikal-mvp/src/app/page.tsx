@@ -4,6 +4,9 @@ import TikalLogo from '@/components/TikalLogo'
 import Image from 'next/image'
 // import { useRouter } from 'next/router'
 import Link from 'next/link'
+import {PiEnvelopeSimple} from 'react-icons/pi'
+import {TbLockSquareRounded} from 'react-icons/tb'
+import {BsEye, BsEyeSlash} from 'react-icons/bs'
 
 export default function Login() {
   // you need an input called "code" and it's a code that the user needs to input
@@ -14,10 +17,12 @@ export default function Login() {
 // https://tikalfilters.slack.com/files/U030RSXFUSE/F05NDQTRPFH/image.png
 
   return (
-    <main className="flex min-h-full flex-col justify-center px-6 py-64 lg:px-8 border-2 border-red-500">
-      <section className="sm:mx-auto sm:w-full sm:max-w-6xl border-dotted border-gray-400 border-2 flex" >
+    <main className="flex h-screen flex-col justify-center px-6 py-24 lg:px-8 border-2 border-red-500">
+      {/* the section needs a shadow around it */}
+      <section className="sm:mx-auto sm:w-full sm:max-w-6xl border-dotted border-gray-400 border-2 flex flex-col sm:flex-row" >
         {/* need to increase box height here but it's not working */}
-        <div className='border-dashed border-2 border-pink-500 w-2/6'>
+        {/* ALSO BEFORE CONTINUING MAKE SURE TO CHANGE BRANCH TO LOGIN TO MAKE NEXT COMMITS */}
+        <div className='border-dashed border-2 border-pink-500 w-full sm:w-4/6 p-6'>
           {/* this div on the left */}
           <div className="pt-4 ml-4">
             <Image
@@ -29,9 +34,10 @@ export default function Login() {
           </div>
 
           <div className='text-center '>
-          <h1 className='font-bold pt-10 text-3xl'>New Here??</h1>
+            {/* put just the tikal logo here not the name */}
+          <h1 className='font-bold pt-10 text-3xl'>Welcome</h1>
           <br />
-          <p>Create a new account</p>
+          <p>Create an account for your organization. </p>
           <br />
           <div className='border-2 border-yellow-600 flex justify-center items-center '>
                 <Link 
@@ -42,42 +48,57 @@ export default function Login() {
           </div>
 
         </div>
-        <div className='border-2 border-tikal-cyan w-4/6'>
+        <div className='border-2 border-tikal-cyan w-full sm:w-3/6 p-6'>
           {/* this div on right */}
           <div className="">
             <h2 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
-            <p>add social media icons here chile</p>
           </div>
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm ">
-            <form className='space-y-6' action="#" method='POST' >
-              <div>
-                <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor="email">Email Address:</label>
-                <div className='mt-2' >
-                  <input id='email' name='email' autoComplete='email' type="email" required className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'/>
+          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm border-2  border-violet-600 ">
+            <form className='space-y-6 ' action="#" method='POST' >
+              <div className='border-dotted border-4 border-black justify-center space-y-2'>
+                {/* add envelope icon */}
+                <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
+                <PiEnvelopeSimple className='absolute ml-3' />
+                  <input
+                    required 
+                    id='email' 
+                    name='email' 
+                    autoComplete='email' 
+                    type="email" 
+                    placeholder='Email' 
+                    className='pr-3 pl-8 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'/>
                 </div>
+                  <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
+                    <TbLockSquareRounded className='absolute ml-3'/> 
+                  <input
+                    required 
+                    id="password" 
+                    name="password" 
+                    type="password" 
+                    autoComplete="current-password"
+                    placeholder='Password' 
+                    className="pr-3 pl-8 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                    {/* put eye here? */}
+                    <BsEye className='absolute right-0 mr-2'/>
+                  </div>
+                  <div className='mt-6'>
+                      <a href="#" className='font-semibold text-tikal-cyan hover:text-indigo-500 float-right text-xs '>Forgot your password?</a>
+                    </div>
               </div>
               <div>
-                <div className=' items-center justify-between'>
-                  <label htmlFor="password" className='block text-sm font-medium leading-6 text-gray-900 '>Password:</label>
+                  {/* put lock here */}
                   <div className='text-sm'>
                     {/* change the text color to match the logo */}
-                    <a href="#" className='font-semibold text-tikal-cyan hover:text-indigo-500 float-right -mt-6 '>Forgot your password?</a>
-                    <div className=''>
-                      <input id="password" name="password" type="password" autoComplete="current-password" required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-                    </div>
                   </div>
-                  
-                </div>
+                
               </div>
               <div>
                 <Link 
                   type="submit" 
                   // onClick={handleClick}
                   href='/dashboard-view'
-                  
                   className="flex w-full justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase">Sign in</Link>
               </div>
-
             </form>
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?
