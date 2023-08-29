@@ -7,6 +7,8 @@ import Link from 'next/link'
 import {PiEnvelopeSimple} from 'react-icons/pi'
 import {TbLockSquareRounded} from 'react-icons/tb'
 import {BsEye, BsEyeSlash} from 'react-icons/bs'
+import {useState} from 'react'
+import {HidePassword} from './utils/showPassword'
 
 export default function Login() {
   // you need an input called "code" and it's a code that the user needs to input
@@ -15,6 +17,12 @@ export default function Login() {
 
 // MAKE IT MORE LIKE THIS: 
 // https://tikalfilters.slack.com/files/U030RSXFUSE/F05NDQTRPFH/image.png
+
+    // hiding 
+
+  const [passwordVisible, setPasswordVisible] = useState(false)
+
+    
 
   return (
     <main className="flex h-screen flex-col justify-center px-6 py-24 lg:px-8 border-2 border-red-500">
@@ -74,12 +82,15 @@ export default function Login() {
                     required 
                     id="password" 
                     name="password" 
-                    type="password" 
                     autoComplete="current-password"
                     placeholder='Password' 
+                    type={passwordVisible ? "text" : "password"}
                     className="pr-3 pl-8 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-                    {/* put eye here? */}
-                    <BsEye className='absolute right-0 mr-2'/>
+                    <div className='absolute right-0 mr-2' onClick={() => setPasswordVisible(!passwordVisible)} >
+                    {passwordVisible ? (
+                      <BsEyeSlash color='black' />) : (<BsEye color='black' />)}
+
+                    </div>
                   </div>
                   <div className='mt-6'>
                       <a href="#" className='font-semibold text-tikal-cyan hover:text-indigo-500 float-right text-xs '>Forgot your password?</a>
