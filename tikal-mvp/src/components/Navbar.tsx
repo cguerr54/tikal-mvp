@@ -1,6 +1,6 @@
 //@ts-nocheck
 import Image from 'next/image'
-import TikalLogo from './TikalLogo'
+import TikalLogo from '../app/utils/TikalLogo'
 
 
 

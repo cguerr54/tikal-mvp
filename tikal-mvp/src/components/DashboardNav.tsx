@@ -1,6 +1,6 @@
 //@ts-nocheck
 import Image from 'next/image'
-import TikalLogo from './TikalLogo'
+import TikalLogo from '../app/utils/TikalLogo'
 import ProfilePic from './ProfilePic'
 import React, { useState } from 'react';
 

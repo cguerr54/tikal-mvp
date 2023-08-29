@@ -1,6 +1,6 @@
 //@ts-nocheck
 'use client'
-import TikalLogo from '@/components/TikalLogo'
+import TikalLogo from '@/app/utils/TikalLogo'
 import Image from 'next/image'
 // import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -8,7 +8,8 @@ import {PiEnvelopeSimple} from 'react-icons/pi'
 import {TbLockSquareRounded} from 'react-icons/tb'
 import {BsEye, BsEyeSlash} from 'react-icons/bs'
 import {useState} from 'react'
-import {HidePassword} from './utils/showPassword'
+import googleIcon from './utils/GoogleIcon'
+// import {HidePassword} from './utils/showPassword'
 
 export default function Login() {
   // you need an input called "code" and it's a code that the user needs to input
@@ -18,9 +19,8 @@ export default function Login() {
 // MAKE IT MORE LIKE THIS: 
 // https://tikalfilters.slack.com/files/U030RSXFUSE/F05NDQTRPFH/image.png
 
-    // hiding 
-
   const [passwordVisible, setPasswordVisible] = useState(false)
+
 
     
 
@@ -51,7 +51,7 @@ export default function Login() {
                 <Link 
                   type="submit" 
                   href='/registration'
-                  className="flex w-9/12 justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase ">Sign up</Link>
+                  className="flex w-9/12 justify-center rounded-full bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase ">Sign up</Link>
               </div>
           </div>
 
@@ -66,7 +66,7 @@ export default function Login() {
               <div className='border-dotted border-4 border-black justify-center space-y-2'>
                 {/* add envelope icon */}
                 <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
-                <PiEnvelopeSimple className='absolute ml-3' />
+                <PiEnvelopeSimple className='absolute ml-3' color='black' />
                   <input
                     required 
                     id='email' 
@@ -77,7 +77,7 @@ export default function Login() {
                     className='pr-3 pl-8 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'/>
                 </div>
                   <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
-                    <TbLockSquareRounded className='absolute ml-3'/> 
+                    <TbLockSquareRounded className='absolute ml-3' color='black'/> 
                   <input
                     required 
                     id="password" 
@@ -108,8 +108,30 @@ export default function Login() {
                   type="submit" 
                   // onClick={handleClick}
                   href='/dashboard-view'
-                  className="flex w-full justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase">Sign in</Link>
+                  className="flex w-full justify-center rounded-full bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase">Sign in</Link>
               </div>
+              <div className='flex justify-center'>
+              <div className='h-1  bg-tikal-cyan  w-5/12'></div> 
+              <p className='-mt-3 mx-1  text-gray-500'> Or </p>
+              <div className='h-1  bg-tikal-cyan  w-5/12' ></div>
+              </div>
+              <div>
+              <Link 
+                  type="submit" 
+                  // onClick={handleClick}
+                  href='/dashboard-view'
+                  className="flex w-full justify-center rounded-full px-3 py-1.5 text-sm font-semibold leading-6 text-tikal-cyan shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase"> 
+                  <Image
+                    src={googleIcon}
+                    alt='google icon'
+                    width={50}
+                    height={50} />
+                  
+                  Google</Link>
+
+                
+              </div>
+
             </form>
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?
