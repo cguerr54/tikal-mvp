@@ -21,18 +21,22 @@ export default function Login() {
 // https://tikalfilters.slack.com/files/U030RSXFUSE/F05NDQTRPFH/image.png
 
   // probably make this it's own function / hook /utility 
+
+  // 
+
+
   const [passwordVisible, setPasswordVisible] = useState(false)
 
 
     
 
   return (
-    <main className="flex h-screen flex-col justify-center px-6 py-24 lg:px-8 border-2 border-red-500">
+    <main className="flex h-screen flex-col justify-center px-6 py-24 lg:px-8 border-2 border-red-500 bg-[url('/assets/wave1.svg')] ">
       {/* the section needs a shadow around it */}
-      <section className="sm:mx-auto sm:w-full sm:max-w-6xl border-dotted border-gray-400 border-2 flex flex-col sm:flex-row" >
+      <section className="sm:mx-auto sm:w-full sm:max-w-6xl border  rounded-xl shadow-2xl flex flex-col sm:flex-row bg-white " >
         {/* need to increase box height here but it's not working */}
         {/* ALSO BEFORE CONTINUING MAKE SURE TO CHANGE BRANCH TO LOGIN TO MAKE NEXT COMMITS */}
-        <div className='border-dashed border-2 border-pink-500 w-full sm:w-4/6 p-6'>
+        <div className=' w-full sm:w-4/6 p-6 rounded-xl   bg-tikal-blues-200 '>
           {/* this div on the left */}
           <div className="pt-4 ml-4">
             <Image
@@ -45,7 +49,7 @@ export default function Login() {
 
           <div className='text-center '>
             {/* put just the tikal logo here not the name */}
-            <div className='border-2 border-black'>
+            <div className=''>
               <Image
               src={TikalCircle}
               alt='skyblue logo for tikal industries'
@@ -59,7 +63,7 @@ export default function Login() {
           <br />
           <p>Create an account for your organization. </p>
           <br />
-          <div className='border-2 border-yellow-600 flex justify-center items-center '>
+          <div className=' flex justify-center items-center '>
                 <Link 
                   type="submit" 
                   href='/registration'
@@ -68,12 +72,12 @@ export default function Login() {
           </div>
 
         </div>
-        <div className='border-2 border-tikal-cyan w-full sm:w-3/6 p-6'>
+        <div className=' w-full sm:w-3/6 p-6'>
           {/* this div on right */}
           <div className="">
             <h2 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
           </div>
-          <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-sm border-2  border-violet-600 ">
+          <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-sm ">
             <form className='space-y-6 ' action="#" method='POST' >
               <div className=' justify-center space-y-2 my-8'>
                 {/* add envelope icon */}
@@ -122,10 +126,10 @@ export default function Login() {
                   href='/dashboard-view'
                   className="flex w-full justify-center rounded-full bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase">Sign in</Link>
               </div>
-              <div className=' flex justify-center'>
-              <div className='h-1  bg-tikal-cyan  w-5/12'></div> 
-              <p className='-mt-3 mx-1  text-gray-500'> Or </p>
-              <div className='h-1  bg-tikal-cyan  w-5/12' ></div>
+              <div className='flex justify-center'>
+              <div className='h-1 bg-tikal-cyan  w-5/12'></div> 
+              <p className='-mt-3 mx-1 text-gray-800'> Or </p>
+              <div className='h-1 bg-tikal-cyan  w-5/12' ></div>
               </div>
               <div>
                 {/* make the following link functional  */}
@@ -133,16 +137,17 @@ export default function Login() {
                   type="submit" 
                   // onClick={handleClick}
                   href='/dashboard-view'
-                  className="flex w-full justify-center rounded-full px-3 py-1.5 text-sm leading-6 text-tikal-cyan shadow-sm hover:bg-indigo-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase"> 
+                  className="flex w-full justify-center rounded-full px-3 py-1.5 text-sm leading-6 border-tikal-cyan border-2 text-tikal-cyan shadow-sm hover:bg-indigo-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase"> 
                   <Image
                     src={googleIcon}
                     alt='google icon'
                     width={25}
                     height={25}
                     className='pr-2'
-                     />
+                  />
                   
-                  Google</Link>
+                  Google
+              </Link>
 
                 
               </div>
