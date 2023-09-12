@@ -9,6 +9,7 @@ import {TbLockSquareRounded} from 'react-icons/tb'
 import {BsEye, BsEyeSlash} from 'react-icons/bs'
 import {useState} from 'react'
 import googleIcon from './utils/GoogleIcon'
+import TikalCircle from './utils/TikalCircleLogo'
 // import {HidePassword} from './utils/showPassword'
 
 export default function Login() {
@@ -19,6 +20,7 @@ export default function Login() {
 // MAKE IT MORE LIKE THIS: 
 // https://tikalfilters.slack.com/files/U030RSXFUSE/F05NDQTRPFH/image.png
 
+  // probably make this it's own function / hook /utility 
   const [passwordVisible, setPasswordVisible] = useState(false)
 
 
@@ -43,7 +45,17 @@ export default function Login() {
 
           <div className='text-center '>
             {/* put just the tikal logo here not the name */}
-          <h1 className='font-bold pt-10 text-3xl'>Welcome</h1>
+            <div className='border-2 border-black'>
+              <Image
+              src={TikalCircle}
+              alt='skyblue logo for tikal industries'
+              width={200}
+              height={200}
+              className='mx-auto my-3'
+              />
+
+            </div>
+          <h1 className='font-bold pt-4 text-3xl'>Welcome</h1>
           <br />
           <p>Create an account for your organization. </p>
           <br />
@@ -61,9 +73,9 @@ export default function Login() {
           <div className="">
             <h2 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
           </div>
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm border-2  border-violet-600 ">
+          <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-sm border-2  border-violet-600 ">
             <form className='space-y-6 ' action="#" method='POST' >
-              <div className='border-dotted border-4 border-black justify-center space-y-2'>
+              <div className=' justify-center space-y-2 my-8'>
                 {/* add envelope icon */}
                 <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
                 <PiEnvelopeSimple className='absolute ml-3' color='black' />
@@ -110,22 +122,25 @@ export default function Login() {
                   href='/dashboard-view'
                   className="flex w-full justify-center rounded-full bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase">Sign in</Link>
               </div>
-              <div className='flex justify-center'>
+              <div className=' flex justify-center'>
               <div className='h-1  bg-tikal-cyan  w-5/12'></div> 
               <p className='-mt-3 mx-1  text-gray-500'> Or </p>
               <div className='h-1  bg-tikal-cyan  w-5/12' ></div>
               </div>
               <div>
+                {/* make the following link functional  */}
               <Link 
                   type="submit" 
                   // onClick={handleClick}
                   href='/dashboard-view'
-                  className="flex w-full justify-center rounded-full px-3 py-1.5 text-sm font-semibold leading-6 text-tikal-cyan shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase"> 
+                  className="flex w-full justify-center rounded-full px-3 py-1.5 text-sm leading-6 text-tikal-cyan shadow-sm hover:bg-indigo-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase"> 
                   <Image
                     src={googleIcon}
                     alt='google icon'
-                    width={50}
-                    height={50} />
+                    width={25}
+                    height={25}
+                    className='pr-2'
+                     />
                   
                   Google</Link>
 
