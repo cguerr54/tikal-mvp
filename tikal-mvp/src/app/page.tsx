@@ -22,7 +22,20 @@ export default function Login() {
 
   // probably make this it's own function / hook /utility 
 
-  // 
+  // as of 9.12.2023
+  //  THIS APP NEEDS TO STACK IN MOBILE VIEW and fit inside the view 
+  // you need to switch branches when working on registration page
+  // you could put random blobs on registration page
+  // here is the source you usee last time:
+  //  https://shuffle.dev/tools/blob-generator
+  // or try stripe frosted gradient 
+  // example here: 
+  // https://kevinhufnagl.com/how-to-stripe-website-gradient-effect/
+  // PROBABLY BEST TOOL FOR HANDLING THIS:
+  //  https://whatamesh.vercel.app/
+
+  // click a button and a chart pops up
+  // aka take input csv, then chart the data
 
 
   const [passwordVisible, setPasswordVisible] = useState(false)
@@ -36,7 +49,7 @@ export default function Login() {
       <section className="sm:mx-auto sm:w-full sm:max-w-6xl border  rounded-xl shadow-2xl flex flex-col sm:flex-row bg-white " >
         {/* need to increase box height here but it's not working */}
         {/* ALSO BEFORE CONTINUING MAKE SURE TO CHANGE BRANCH TO LOGIN TO MAKE NEXT COMMITS */}
-        <div className=' w-full sm:w-4/6 p-6 rounded-xl   bg-tikal-blues-200 '>
+        <div className=' w-full sm:w-4/6 p-6 rounded-xl bg-tikal-blues-200 '>
           {/* this div on the left */}
           <div className="pt-4 ml-4">
             <Image

@@ -1,6 +1,5 @@
-//@ts-nocheck
 
-const TikalLogo = '/assets/tikal-logo.png'
+const TikalLogo: string = '/assets/tikal-logo.png'
 
 
 export default TikalLogo;
