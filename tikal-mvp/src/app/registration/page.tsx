@@ -118,8 +118,8 @@ export default function Registration(){
           {/* this div isn't controlling the breakline */}
           <Link 
             type="submit" 
-            href='/dashboard-view'
-            className="flex justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600  w-60 mx-auto -mt-10 h-14 pt-4">Sign up</Link>
+            href='/device-setup'
+            className="flex justify-center rounded-md bg-tikal-cyan px-3 py-1.5 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-60 mx-auto -mt-10 h-14 pt-4">Sign up</Link>
         </div>
       </form>
       
