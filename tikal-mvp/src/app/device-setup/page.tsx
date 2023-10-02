@@ -27,7 +27,7 @@ export default function DeviceSetup() {
   // center the header and make it larger 3xl
   // put a gradient on the h1's
   // still need like a focus ring or border when the cards are clicked 
-  // change the siz eof the button. 
+  // reduce the size of the button. 
 
 
   return (
@@ -54,7 +54,7 @@ export default function DeviceSetup() {
             size={200}
           /> */}
           <Link
-            href={''}          
+            href='set-location'          
           >
             <div className='flex items-center justify-center border border-tikal-cyan mx-auto'>
               <GiDefenseSatellite
@@ -90,7 +90,7 @@ export default function DeviceSetup() {
     <div className=' flex justify-center items-center '>
               <Link 
                 type="submit" 
-                href='/dashboard-view'
+                href='/set-location'
                 className="flex w-9/12 justify-center rounded-full bg-tikal-cyan px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 uppercase mt-6 ">Sign up</Link>
             </div>
   </main>

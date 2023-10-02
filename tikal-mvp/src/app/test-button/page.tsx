@@ -1,10 +1,17 @@
 //@ts-nocheck
 "use client"
 import React, { useState, useEffect } from "react"
+import Map from '../../components/Map'
+import Layout from '../../components/Layout';
+import Section from '../../components/Section';
+import Container from '../../components/Container';
 
 
 export default function TestButton(){
-  
+
+  // lat /long for new mhub
+
+  const DEFAULT_CENTER = [41.886870, -87.668060]
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -17,6 +24,7 @@ export default function TestButton(){
   }, 5000)
 
   }
+  
 
   return(
     <main>
@@ -26,6 +34,31 @@ export default function TestButton(){
         >
       {isLoading ? "Processing" : "Run Test"}
       </button>
+
+<Layout>
+
+      <Section>
+        <Container>
+
+          <Map className={''} width="800" height="400" center={DEFAULT_CENTER} zoom={12}>
+            {({ TileLayer, Marker, Popup }) => (
+              <>
+                <TileLayer
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                />
+                <Marker position={DEFAULT_CENTER}>
+                  <Popup>
+                    A pretty CSS3 popup. <br /> Easily customizable.
+                  </Popup>
+                </Marker>
+              </>
+            )}
+          </Map>
+
+        </Container>
+      </Section>
+    </Layout>
 
     </main>
 
