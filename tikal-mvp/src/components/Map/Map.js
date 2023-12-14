@@ -16,7 +16,6 @@ const Map = (props) => {
   return (
     <div style= {{aspectRatio: width / height}}>
       <DynamicMap {...props} />
-
     </div>
   )
 

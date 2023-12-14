@@ -10,7 +10,7 @@ export default function DeployedDevices() {
         <p className='  text-xl font-bold'>Deployed Devices</p>
       </div>
       <ul role="list" className="divide-y divide-gray-100">
-        <li className="flex justify-between gap-x-6 py-5">
+        {/* <li className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <Image
               alt='image for device 1'
@@ -34,7 +34,7 @@ export default function DeployedDevices() {
             </div>
             
           </div>
-        </li>
+        </li> */}
         <li className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <Image
@@ -45,8 +45,8 @@ export default function DeployedDevices() {
               className='h-12 w-12 flex-none rounded-full bg-gray-50'
             />
             <div className='min-w-0 flex-auto'>
-              <p className='text-sm font-semibold leading-6 text-gray-900'>Inti Device 2</p>
-              <p className='mt-1 truncate text-xs leading-5 text-gray-500'>Bathroom Sink (First Floor)</p>
+              <p className='text-sm font-semibold leading-6 text-gray-900'>Inti Device 1</p>
+              <p className='mt-1 truncate text-xs leading-5 text-gray-500'>Event Space (Mhub)</p>
             </div>
           </div>
           <div className='hidden sm:flex sm:flex-col sm:items-end'>
@@ -60,7 +60,7 @@ export default function DeployedDevices() {
             
           </div>
         </li>
-        <li className="flex justify-between gap-x-6 py-5">
+        {/* <li className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <Image
               alt='image for device 1'
@@ -84,7 +84,7 @@ export default function DeployedDevices() {
             </div>
             
           </div>
-        </li>
+        </li> */}
         <li className="flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <Image
@@ -95,8 +95,8 @@ export default function DeployedDevices() {
               className='h-12 w-12 flex-none rounded-full bg-gray-50'
             />
             <div className='min-w-0 flex-auto'>
-              <p className='text-sm font-semibold leading-6 text-gray-900'>Inti Device 4</p>
-              <p className='mt-1 truncate text-xs leading-5 text-gray-500'>Gutter</p>
+              <p className='text-sm font-semibold leading-6 text-gray-900'>Inti Device 2</p>
+              <p className='mt-1 truncate text-xs leading-5 text-gray-500'>Chicago River</p>
             </div>
           </div>
           <div className='hidden sm:flex sm:flex-col sm:items-end'>
@@ -105,7 +105,7 @@ export default function DeployedDevices() {
               <div class="flex-none rounded-full bg-red-500/20 p-1">
               <div class="h-1.5 w-1.5 rounded-full bg-red-500"></div>
             </div>
-              <p class="text-xs leading-5 text-gray-500">Online</p>
+              <p class="text-xs leading-5 text-gray-500">Offline</p>
             </div>
             
           </div>
