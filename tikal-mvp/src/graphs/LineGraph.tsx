@@ -31,7 +31,7 @@ const LineGraph = () => {
     labels,
     datasets: [
       {
-        label: "parts per million",
+        label: "cyanobacteria detected",
         data: [134, 212, 555, 953, 764, 111, 432 ],
         backgroundColor: 'rgb(255, 99, 132)',
           borderColor: 'rgba(255, 99, 132, 0.5)',

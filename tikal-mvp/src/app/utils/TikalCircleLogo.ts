@@ -1,6 +1,6 @@
-//@ts-nocheck
 
-const TikalCircle = '/assets/tikal-circle.svg'
+
+const TikalCircle: string = '/assets/tikal-circle.svg'
 
 
 export default TikalCircle;

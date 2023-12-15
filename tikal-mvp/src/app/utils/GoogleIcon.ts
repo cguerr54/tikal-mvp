@@ -1,6 +1,5 @@
-//@ts-nocheck
 
 
-const googleIcon = '/assets/Google.svg'
+const googleIcon: string = '/assets/Google.svg'
 
 export default googleIcon
